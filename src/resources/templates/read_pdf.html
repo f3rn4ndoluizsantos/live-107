@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Carregar Arquivo PDF</h1>
+<form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">
+        {{ form.pdf_files.label(class="form-label") }}
+        {{ form.pdf_files(class="form-control", placeholder="name@example.com") }}
+        {{ form.submit(class="btn btn-primary mt-3") }}
+    </div>
+</form>
+{% endblock %}

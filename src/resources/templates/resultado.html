@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Texto Extraído dos PDFs</h1>
+    {% for texto in texts %}
+    <ul class="list-group mb-5">
+        <li class="list-group-item list-group-item-action active" aria-disabled="true">{{texto.filename}}</li>
+        <li class="list-group-item"><span class="badge text-bg-primary fs-6">Valor Original: </span>  {{texto.valor_orignal}}</li>
+        <li class="list-group-item"><span class="badge text-bg-primary fs-6">Valor Multa: </span>  {{texto.valor_multa}}</li>
+        <li class="list-group-item"><span class="badge text-bg-primary fs-6">Valor Juros: </span>  {{texto.valor_juros}}</li>
+        <li class="list-group-item"><span class="badge text-bg-primary fs-6">Valor Taxa: </span>  {{texto.valor_taxa}}</li>
+        <li class="list-group-item"><span class="badge text-bg-primary fs-6">Valor Total: </span>  {{texto.valor_total}}</li>
+        <li class="list-group-item"><span class="badge text-bg-primary fs-6">Código de Barras: </span>  {{texto.barcodes}}</li>
+        <li class="list-group-item"><span class="badge text-bg-primary fs-6">Vencimento: </span>  {{texto.vencimentos}}</li>
+        <li class="list-group-item"><span class="badge text-bg-primary fs-6">Período: </span>  {{texto.periodos}}</li>
+        <li class="list-group-item"><span class="badge text-bg-primary fs-6">I.E.: </span>  {{texto.inscricoes}}</li>
+        <li class="list-group-item"><span class="badge text-bg-primary fs-6">Receita: </span>  {{texto.receita}}</li>
+    </ul>
+    {% endfor %}
+    <a href="{{url_for('pdf_reader')}}">Voltar</a>
+{% endblock %}

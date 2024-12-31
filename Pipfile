@@ -7,8 +7,10 @@ name = "pypi"
 flask = "*"
 pandas = "*"
 pyautogui = "*"
-flask-wtf = "*"
 requests = "*"
+flask-wtf = "*"
+pypdf2 = "*"
+pymupdf = "*"
 
 [dev-packages]
 
